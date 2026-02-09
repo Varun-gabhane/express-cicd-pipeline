@@ -1,0 +1,14 @@
+{
+  "name": "express-cicd-pipeline",
+  "version": "1.0.0",
+  "description": "Simple Express app for CI/CD pipeline demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
