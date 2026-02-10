@@ -22,16 +22,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # TEMP DEBUG — REMOVE AFTER SUCCESS
-      - name: Debug docker username
-        run: |
-          echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}"
-
       - name: Build and push image
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
           push: true
-          tags: varunnn10/express-cicd-pipeline:latest
-
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/express-cicd-pipeline:latest
