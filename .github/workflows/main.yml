@@ -33,4 +33,5 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/express-cicd-pipeline:latest
+          tags: varunnn10/express-cicd-pipeline:latest
+
